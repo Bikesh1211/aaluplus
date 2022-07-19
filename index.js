@@ -36,13 +36,20 @@ const checkWin = () =>{
                 document.querySelector('.info').innerText = "Player " + boxtext[e[0]].innerText + " Won"
                 gameOver= true
                 // document.querySelector('.line').style.transform = "translate(10vw,20vw) rotate(90deg)"
-                document.querySelector('.info').style.color = "red"
-                document.querySelector('#reset').innerText = "New Game"
+                // document.querySelector('.info').style.color = "red"
+ 
+                    //reset jgame after win
 
+                    setTimeout(() => {
+                        
+                        let boxtexts = document.querySelectorAll('.boxtext');
+                        Array.from(boxtexts).forEach(element=>{
+                            element.innerText = ""
+                        })
+                        
+                    }, 3000);
+                    winaudio.play()
 
-
-
-                winaudio.play()
 
         }
         

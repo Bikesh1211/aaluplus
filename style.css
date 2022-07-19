@@ -68,7 +68,7 @@ a{
 
 }
 .boxtext{
-    transition: all ease 1s;
+    transition-delay: 1s;
     color: rgb(8, 159, 8);
 }
 .box:hover{
