@@ -33,9 +33,17 @@ const checkWin = () =>{
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText)&&
         (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !=="")
         ){
-                document.querySelector('.info').innerText = boxtext[e[0]].innerText + " Player Won"
+                document.querySelector('.info').innerText = "Player " + boxtext[e[0]].innerText + " Won"
                 gameOver= true
+                // document.querySelector('.line').style.transform = "translate(10vw,20vw) rotate(90deg)"
+                document.querySelector('.info').style.color = "red"
+                document.querySelector('#reset').innerText = "New Game"
+
+
+
+
                 winaudio.play()
+
         }
         
     })
@@ -53,9 +61,12 @@ Array.from(boxes).forEach(element =>{
             boxtext.innerText = turn;
           turn =  changeTurn()
             audioTurn.play()
+
+            
             checkWin();
                 if(!gameOver){
                     document.getElementsByClassName("info")[0].innerText = "Turn For " + turn;
+
                 }
         }
     })
@@ -76,7 +87,6 @@ reset.addEventListener("click",(e)=>{
     turn ="X"
     gameOver =false
 
-                    document.getElementsByClassName("info")[0].innerText = "Turn For"+ " " + turn;
-
+   document.getElementsByClassName("info")[0].innerText = "Turn For"+ " " + turn;
     
 })
