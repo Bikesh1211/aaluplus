@@ -107,15 +107,18 @@ a{
 }
 #reset:hover{
     transform: rotate(10deg) scale(1.2);
-    /* transform: scale(1.2); */
+    margin: 55px;
 }
 
 .line{
     background-color: black;
     height: 3px;
-    width: 20vw;
+    width: 0;
     position: absolute;
-    transform: rotate(90deg);
-    transform: translate(10vw,20vw) rotate(90deg);
-    display: none;
+    /* transform: rotate(90deg); */
+    /* transform: translate(0vw,15vw) rotate(90deg); */
+    transition: width 1s ease-in-out;
+    background-color: green;
+    
+
 }

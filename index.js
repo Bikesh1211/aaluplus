@@ -12,6 +12,8 @@ let audioTurn = new Audio('turnaudio.mp3');
 let turn = "X"
 let gameOver = false
 
+let 
+
 const changeTurn = () =>{
     return turn === "X"? "O": "X"
 }
@@ -19,14 +21,14 @@ const changeTurn = () =>{
 const checkWin = () =>{
     let boxtext = document.getElementsByClassName('boxtext')
     const wins = [
-        [0,1,2],
-        [3,4,5],
-        [6,7,8],
-        [0,3,6],
-        [1,4,7],
-        [2,5,8],
-        [0,4,8],
-        [2,4,6]
+        [0,1,2,0,5,0],
+        [3,4,5,0,15,0],
+        [6,7,8,0,25,0],
+        [0,3,6,-10,15,90],
+        [1,4,7,0,15,90],
+        [2,5,8,10,15,90],
+        [0,4,8,0,15,45],
+        [2,4,6,0,15,-45]
     ]
 
     wins.forEach(e=>{
@@ -35,7 +37,9 @@ const checkWin = () =>{
         ){
                 document.querySelector('.info').innerText = "Player " + boxtext[e[0]].innerText + " Won"
                 gameOver= true
-                // document.querySelector('.line').style.transform = "translate(10vw,20vw) rotate(90deg)"
+                // document.querySelector('.line').style.display = "block"
+                document.querySelector('.line').style.width = '20vw'
+                document.querySelector('.line').style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`
                 // document.querySelector('.info').style.color = "red"
  
                     //reset jgame after win
@@ -46,6 +50,8 @@ const checkWin = () =>{
                         Array.from(boxtexts).forEach(element=>{
                             element.innerText = ""
                         })
+                        document.querySelector('.line').style.display = "none"
+
                         
                     }, 3000);
                     winaudio.play()
