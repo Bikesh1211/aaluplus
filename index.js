@@ -68,6 +68,16 @@ const checkWin = () =>{
                         Array.from(boxtexts).forEach(element=>{
                             element.innerText = ""
                             document.querySelector('.line').style.width = '0'
+                            if(winner=="X"){
+
+                                document.getElementsByClassName("info")[0].innerText = "Turn For"+ " " + "O";
+                            }
+                            else{
+                                document.getElementsByClassName("info")[0].innerText = "Turn For"+ " " + "X";
+
+                            }
+
+
                         })
 
 
@@ -118,6 +128,8 @@ reset.addEventListener("click",(e)=>{
     })
     gameOverAudio.play();
     gameOver =false
+    // document.getElementsByClassName("info")[0].innerText = "Turn For"+ " " + winner;
+
 
     
 })
