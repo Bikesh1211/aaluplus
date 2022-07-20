@@ -12,7 +12,8 @@ let audioTurn = new Audio('turnaudio.mp3');
 let turn = "X"
 let gameOver = false
 
-let 
+// let xWin = 0
+// let oWin = 0
 
 const changeTurn = () =>{
     return turn === "X"? "O": "X"
@@ -54,6 +55,7 @@ const checkWin = () =>{
 
                         
                     }, 3000);
+
                     winaudio.play()
 
 
