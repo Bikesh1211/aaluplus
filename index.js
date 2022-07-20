@@ -42,7 +42,7 @@ const checkWin = () =>{
         (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !=="")
         ){
                 document.querySelector('.info').innerText = "Player " + boxtext[e[0]].innerText + " Won"
-               winner =  boxtext[e[0]].innerText
+            //    winner =  boxtext[e[0]].innerText
                console.log(winner);
                 gameOver= true
                 document.querySelector('.line').style.display = "block" 
