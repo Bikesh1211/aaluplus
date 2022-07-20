@@ -112,13 +112,13 @@ a{
 
 .line{
     background-color: black;
-    height: 3px;
+    height: 4px;
     width: 0;
     position: absolute;
     /* transform: rotate(90deg); */
     /* transform: translate(0vw,15vw) rotate(90deg); */
     transition: width .5s ease-in-out;
-    background-color: green;
+    background-color: rgb(107, 53, 243);
     
 
 }
