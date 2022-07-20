@@ -27,14 +27,14 @@ const changeTurn = () =>{
 const checkWin = () =>{
     let boxtext = document.getElementsByClassName('boxtext')
     const wins = [
-        [0,1,2,0,5,0,10],
-        [3,4,5,0,15,0,30],
-        [6,7,8,0,25,0,50],
-        [0,3,6,-10,15,90,30],
-        [1,4,7,0,15,90,30],
-        [2,5,8,10,15,90,30],
-        [0,4,8,0,15,45,30],
-        [2,4,6,0,15,-45,30]
+        [0,1,2,0,5,0,0,10],
+        [3,4,5,0,15,0,0,30],
+        [6,7,8,0,25,0,0,50],
+        [0,3,6,-10,15,90,-20,30],
+        [1,4,7,0,15,90,0,30],
+        [2,5,8,10,15,90,20,30],
+        [0,4,8,0,15,45,0,30],
+        [2,4,6,0,15,-45,0,30]
     ]
 
     wins.forEach(e=>{
@@ -52,7 +52,7 @@ const checkWin = () =>{
                 var x = window.matchMedia("(max-width: 768px)")
                 if (x.matches) { // If media query matches
                     document.querySelector('.line').style.width = '40vw'
-                    document.querySelector('.line').style.transform = `translate(${e[3]}vw,${e[6]}vw) rotate(${e[5]}deg)`
+                    document.querySelector('.line').style.transform = `translate(${e[6]}vw,${e[7]}vw) rotate(${e[5]}deg)`
 
 
                 }
