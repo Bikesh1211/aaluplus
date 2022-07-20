@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Edu QLD Beginner', cursive;
+
 }
 body{
     /* background-image: url('paper.jpg'); */
@@ -41,12 +42,18 @@ a{
     margin-top: 50px;
     position: relative;
 
+    
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;    
+    
+
 }
 .container{
     display: grid;
     grid-template-rows: repeat(3,10vw);
     grid-template-columns: repeat(3,10vw);
-    transition: all ease 1s;
 }
 @media (max-width: 767px) {
     .container{
@@ -62,9 +69,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all ease 1s;
-
-
 
 }
 .boxtext{
