@@ -38,7 +38,7 @@ const checkWin = () =>{
         ){
                 document.querySelector('.info').innerText = "Player " + boxtext[e[0]].innerText + " Won"
                 gameOver= true
-                // document.querySelector('.line').style.display = "block"
+                document.querySelector('.line').style.display = "block" 
                 document.querySelector('.line').style.width = '20vw'
                 document.querySelector('.line').style.transform = `translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`
                 // document.querySelector('.info').style.color = "red"
@@ -50,8 +50,9 @@ const checkWin = () =>{
                         let boxtexts = document.querySelectorAll('.boxtext');
                         Array.from(boxtexts).forEach(element=>{
                             element.innerText = ""
+                            document.querySelector('.line').style.width = '0'
                         })
-                        document.querySelector('.line').style.display = "none"
+
 
                         
                     }, 3000);
@@ -95,6 +96,8 @@ reset.addEventListener("click",(e)=>{
     let boxtexts = document.querySelectorAll('.boxtext');
     Array.from(boxtexts).forEach(element=>{
         element.innerText = ""
+        document.querySelector('.line').style.width = '0'
+
     })
     gameOverAudio.play();
 
